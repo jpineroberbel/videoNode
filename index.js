@@ -17,8 +17,8 @@ io.on('connection', function(socket){
 });
 });
 app.use(siofu.router).use(express.static(__dirname + '/public'));
-
-http.listen(3000, function () {
+const PORT = process.env.PORT || 3000;
+http.listen(PORT, function () {
       console.log('Example app listening on port 3000!');
 });
 
